@@ -1,0 +1,60 @@
+.photo_stickers{
+    border-radius: 50%;
+    /* background-image: url(../media/photo_sticker_bg.jpg); */
+    background-color: rgb(145, 145, 145);
+    padding:0%;
+    border:50px;
+    background-size: 100%;
+}
+
+body{
+    background-image: url(../media/character_bg.jpg);
+    background-size: 100%;
+}
+
+#character_table{
+    position:relative;
+    top: 100px;
+}
+
+.navbar{
+    position: fixed; /* Make it stick/fixed */
+    top: 0px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    z-index: 3;
+}
+
+.region{
+    font-size: x-large;
+    border: 30px;
+    margin: 30px;
+    color:rgb(255, 255, 255);
+    margin-left: 0%;
+}
+
+a{
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.region.active{
+    /* background: rgb(2,0,36); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0) 100%);
+}
+
+.char_table td{
+    padding:30px;
+    /* border-bottom: 1000px; */
+}
+
+.char_table{
+    margin-bottom: 15%;
+}
+
+/* footer{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    left:0px;
+} */

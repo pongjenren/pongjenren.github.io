@@ -1,0 +1,66 @@
+.navbar{
+    position: fixed; /* Make it stick/fixed */
+    top: 0px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    z-index: 3;
+}
+.nav-item{
+    font-size: 20px;
+    margin: 0px 15px;
+}
+
+footer{
+    background-color: lightgray;
+    /* position:relative; */
+}
+
+#bg{
+    width:100%;
+    filter:blur(5px);
+    position:fixed;
+    top:-70px;
+    z-index: -1;
+}
+
+#form_div{
+    padding-top: 100px;
+}
+
+#feature_form{
+    color: white;
+}
+
+.input-group-prepend span{
+    display: inline-block;
+    width:100px;
+    text-align: right;
+}
+
+table{
+    background-color: rgba(255,255,255,0.8);
+    border: 1px black solid;
+}
+
+th{
+    /* width:200px; */
+    text-align: center;
+    /* border: 1px black solid; */
+}
+td{
+    text-align: center;
+    border: 1px black solid;
+}
+
+.artifact_row.hide{
+    display: none;
+}
+
+.btn{
+    z-index: -1;
+    background-color: rgb(194, 194, 194);
+}
+
+.btn.active{
+    background-color:white;
+}

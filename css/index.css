@@ -1,0 +1,156 @@
+body{
+    background-color: #FBF9FE;
+}
+
+#load_front{
+    position: fixed;
+    bottom: 50px;
+    width:768px; /*original 768px*/
+    left: 50%;
+    margin-left: -384px;
+    animation-name: disapear;
+    animation-iteration-count: 1;
+    animation-duration: 5.4s;
+    animation-timing-function: cubic-bezier(0.37, 0.58, 0.79, 0.43);
+    opacity: 0%;
+}
+
+#load_background{
+    position: fixed;
+    bottom: 50px;
+    width:768px; /*original 768px*/
+    height: 270px;
+    left: 50%;
+    margin-left: -384px;
+    animation-name: slide-in;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.37, 0.58, 0.79, 0.43);
+    opacity: 0%;
+}
+
+#index_background{
+    width: 100%;
+    opacity: 0%;
+    animation-name: show_up;
+    animation-delay: 5.5s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+.deco{
+    position: fixed;
+    bottom: 50px;
+    z-index: 1;
+    opacity: 0%;
+    animation-delay: 5.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0, 0.37, 0.99);
+}
+
+#pillar_1{
+    bottom: 75px;
+    left: 30%;
+    opacity: 0%;
+    height: 70%;
+    animation-name: show_up, pi1_move;
+    animation-duration: 0.5s, 7s;    
+}
+
+#pillar_2{
+    bottom: 100px;
+    right: 24%;
+    opacity: 0%;
+    height: 50%;
+    animation-name: show_up, pi2_move;
+    animation-duration: 0.5s, 7s;
+}
+
+#gate{
+    bottom: -40px;
+    width: 45.6%;
+    left: 50%;
+    margin-left: -350px;
+    animation-name: show_up, gate_move;
+    animation-delay: 5.5s;
+    animation-duration: 0.5s, 7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0, 0.37, 0.99);
+}
+
+#prompt{
+    font-size: 25px;
+    color:#FBF9FE;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(2, 0, 36, 0.75) 25%, rgba(2,0,36,0.75) 75%, rgba(2,0,36,0) 100%);
+    animation-name: show_up;
+    animation-delay: 10s;
+    animation-duration: 1s;;
+    animation-fill-mode: forwards;
+    position:fixed;
+    bottom: 100px;
+    left:50%;
+    width:600px;
+    margin-left:-280px;
+    z-index: 3;
+    text-align: center;
+    opacity: 0%;
+}
+
+#white{
+    opacity: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+}
+
+@keyframes slide-in{
+    0% {
+        width: 50px;
+        opacity: 100%;
+    }
+    95% {
+        width: 768px;
+        opacity: 100%;
+    }
+    100% {opacity: 0%;}
+}
+
+@keyframes disapear{
+    0% {opacity: 100%;}
+    95% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+@keyframes show_up{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes pi1_move {
+    from{left: 20%; height: 70%; bottom: 65px;}
+    to {left: 15%; height: 90%; bottom: -10px;}
+}
+
+@keyframes pi2_move {
+    from{right:24%; height: 50%; bottom:80px;}
+    to{right:12%; height: 75%; bottom: -10px;}
+}
+
+@keyframes gate_move{
+    /* from{width: 700px; bottom: -40px; margin-left: -350px;} */
+    from{width: 45.6%; bottom: -5%; margin-left: -22.79%;}
+    /* to{width:1800px; bottom: -550px; margin-left: -900px */
+    to{width:117.2%; bottom: -73%; margin-left: -58.6%;}
+}
+
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }

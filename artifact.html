@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-tw" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/artifact.css" rel="stylesheet">
+        <!-- <link href="./css/game_feature.css" rel="stylesheet"> -->
+        <!-- <link href="./css/character.css" rel="stylesheet"> -->
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    </head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="./media/logo.png" width="68" height="50" alt="" style="margin-left: 30px;">
+              </a>
+            <!-- <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./home.html">首頁</a>
+                  </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./game_feature.html">遊戲特色</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./character.html">角色介紹</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">聖遺物</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">突破素材</a>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+        <img src="./media/artifact_bg.jpg" id="bg" z-index="-1">
+
+        
+        <div class="container-fluid pb-2" id="form_div">
+          <div class="row text-center justify-content-center">
+            <img src="./media/header.png" class="w-50" style="filter: invert(100%);">
+            <h1 style="color:white; font-size:50px;">聖遺物</h1>
+          </div>
+            <div class="row text-center" id="side_bar">
+                <div class="col-10 px-5">
+                    <form id="feature_form">
+                      <div class="form-group">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>最低稀有度</span>
+                            <button class="btn btn-light" type="button" value="lb_1">1星</button>
+                            <button class="btn btn-light" type="button" value="lb_2">2星</button>
+                            <button class="btn btn-light" type="button" value="lb_3">3星</button>
+                            <button class="btn btn-light" type="button" value="lb_4">4星</button>
+                          </div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>最高稀有度</span>
+                            <button class="btn btn-light" type="button" value="ub_3">3星</button>
+                            <button class="btn btn-light" type="button" value="ub_4">4星</button>
+                            <button class="btn btn-light" type="button" value="ub_5">5星</button>
+                          </div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>治療類</span>
+                            <button class="btn btn-light" type="button" value="recover">恢復生命力</button>
+                            <button class="btn btn-light" type="button" value="heal">治療效果</button>
+                            <button class="btn btn-light" type="button" value="healed">受治療效果</button>
+                          </div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>屬性提升類</span>
+                            <button class="btn btn-light" type="button" value="life">生命力</button>
+                            <button class="btn btn-light" type="button" value="attack">攻擊力</button>
+                            <button class="btn btn-light" type="button" value="defense">防禦力</button>
+                          </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>傷害提升類</span>
+                            <button class="btn btn-light" type="button" value="damage">傷害</button>
+                            <button class="btn btn-light" type="button" value="element_damage">元素傷害</button>
+                            <button class="btn btn-light" type="button" value="physic">物理傷害</button>
+                            <button class="btn btn-light" type="button" value="normal_attack">普攻傷害</button>
+                            <button class="btn btn-light" type="button" value="punch">重擊傷害</button>
+                            <button class="btn btn-light" type="button" value="drop_damage">下落攻擊傷害</button>
+                            <button class="btn btn-light" type="button" value="skill">元素戰技傷害</button>
+                            <button class="btn btn-light" type="button" value="ultament">元素爆發傷害</button>
+                            <button class="btn btn-light" type="button" value="reduction">減抗</button>
+                          </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend" id="button-addon3">
+                            <span>元素類</span>
+                            <button class="btn btn-light" type="button" value="water">水</button>
+                            <button class="btn btn-light" type="button" value="fire">火</button>
+                            <button class="btn btn-light" type="button" value="ice">冰</button>
+                            <button class="btn btn-light" type="button" value="thunder">雷</button>
+                            <button class="btn btn-light" type="button" value="rock">岩</button>
+                            <button class="btn btn-light" type="button" value="wind">風</button>
+                            <button class="btn btn-light" type="button" value="grass">草</button>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-10">
+
+                <table border="2">
+                  <tbody>
+                    <tr>
+                      <th width="8%"></th>
+                      <th width="10%">名稱</th>
+                      <th width="7%">最低稀有度</th>
+                      <th width="7%">最高稀有度</th>
+                      <th width="30%">兩件套效果</th>
+                      <th width="30%">四件套效果</th>
+                      <th width="20%">tags</th>
+                    </tr>
+                    <tr class="defense recover lb_1 ub_3 artifact_row">
+                      <td><img src="./media/lucky.png"></td>
+                      <td>幸運兒</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>防禦力提高100點。</td>
+                      <td>拾取摩拉時，恢復300點生命值。</td>
+                      <td>防禦力<br>恢復生命值</td>
+                    </tr>
+                    <tr class="attack damage lb_3 ub_4 artifact_row">
+                      <td><img src="./media/奇迹生之花.png"></td>
+                      <td>奇蹟</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>攻擊力提高18%。</td>
+                      <td>對生命值高於50%的敵人，造成的傷害增加30%。</td>
+                      <td>攻擊力<br>傷害</td>
+                    </tr>
+                    <tr class="element_damage fire lb_4 ub_5 artifact_row">
+                      <td><img src="./media/炎之魔女生之花.png"></td>
+                      <td>熾烈的炎之魔女</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>獲得15%火元素傷害加成。</td>
+                      <td>超載、燃燒、烈綻放反應造成的傷害提升40%，蒸發、融化反應的加成係數提高15%。施放元素戰技後的10秒內，二件套的效果提高50%，該效果最多疊加3次。</td>
+                      <td>元素傷害<br>火</td>
+                    </tr>
+                    <tr class="element_damage grass reduction lb_4 ub_5 artifact_row">
+                      <td><img src="./media/深林的记忆生之花.png"></td>
+                      <td>深林的記憶</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>獲得15%草元素傷害加成。</td>
+                      <td>元素戰技或元素爆發命中敵人後，使命中目標的草元素抗性降低30%，持續8秒。裝備者處於隊伍後台時，依然能觸發該效果。</td>
+                      <td>元素傷害<br>草<br>減抗</td>
+                    </tr>
+                    <tr class="attack normal_attack lb_4 ub_5 artifact_row">
+                      <td><img src="./media/角斗士的终幕礼生之花.png"></td>
+                      <td>角鬥士的終幕禮</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>攻擊力提高18%。</td>
+                      <td>裝備該聖遺物套裝的角色為單手劍、雙手劍、長柄武器角色時，角色普通攻擊造成的傷害提高35%。</td>
+                      <td>攻擊力<br>普攻傷害</td>
+                    </tr>
+                    <tr class="attack normal_attack lb_4 ub_5 artifact_row">
+                      <td><img src="./media/追忆之注连生之花.png"></td>
+                      <td>追憶之注連</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>攻擊力提高18%。</td>
+                      <td>施放元素戰技時，如果角色的元素能量高於或等於15點，則會流失15點元素能量，使接下來的10秒內，普通攻擊、重擊、下落攻擊造成的傷害提高50%。持續期間內效果不會再次觸發。</td>
+                      <td>攻擊力<br>傷害<br>普攻傷害<br>重擊傷害</td>
+                    </tr>
+                    <tr class="ice element_damage lb_4 ub_5 artifact_row">
+                      <td><img src="./media/冰风迷途的勇士生之花.png"></td>
+                      <td>冰風迷途的勇士</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>獲得15%冰元素傷害加成。</td>
+                      <td>攻擊處於冰元素影響下的敵人時，暴擊率提高20%；若敵人處於凍結狀態下，則暴擊率額外提高20%。</td>
+                      <td>冰<br>爆擊率<br>元素傷害</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid px-0">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0 border-top mt-0">
+            <div class="col-md-4 d-flex align-items-center">
+              <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img src="./media/logo.png" width="96" height="70" alt="" style="margin-left: 20px;">
+                <!-- <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg> -->
+              </a>
+              <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+            </div>
+        
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-muted" href="#"><img src="./media/twitter.svg" width="30px"></a></li>
+              <li class="ms-3 mx-5"><a class="text-muted" href="#"><img src="./media/facebook.svg" width="30px"></a></li>
+            </ul>
+          </footer>
+        </div>
+
+        
+        <script src="./js/artifact.js"></script>
+    </body> 
+</html>
