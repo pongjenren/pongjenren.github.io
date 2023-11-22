@@ -1,0 +1,14 @@
+img{
+    position: absolute;
+    filter: invert(100%);
+    z-index: 3;
+    top: 680px;
+    left: 300px;
+    width: 700px;
+    height: 10%;
+}
+canvas{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+}

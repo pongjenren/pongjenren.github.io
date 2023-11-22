@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <script type="text/javascript" src="build/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="build/matter.js"></script>
+  <script type="text/javascript" src="galtonboard.js"></script>
+  <body>
+    <h1>Intro to Communications</h1>
+    Number of layers of pillars: <br>
+    <!-- <input type="number" id="pillers_input" min="5" max="10" value="5" style="width: 150px;"><br> -->
+    <select stlye="width: 150px;" id="number_of_pillar">
+      <option>12</option>
+      <option selected="selected">16</option>
+      <option>20</option>
+    </select><br>
+    Number of balls:<br>
+    <!-- <input type="number" id="balls_input" min="100" max="200" step="20" value="100" style="width: 150px;"><br> -->
+    <select id="number_of_ball">
+      <option>500</option>
+      <option>600</option>
+      <option>700</option>
+    </select><br>
+    Pillar's offset:<br>
+    <select id="pillar_offset">
+      <option selected="selected">10</option>
+      <option>12</option>
+      <option>14</option>
+    </select><br>
+    <input type="checkbox" id="display_nd" name="display_nd" checked>
+    <label for="display_nd">Display Gauss curve</label><br>
+    <button onclick="run_galton()">Run!</button>
+    <div id="matter_canvas" name="matter_canvas"></div>
+    <img src = "./svg/normal_distribution.svg" id="nd_curve"/>
+  </body>
+  <!-- <script type="text/javascript" src="test.js"></script> -->
+  <script type="text/javascript" src="ui.js"></script>
+</html>
