@@ -5,7 +5,9 @@ img{
     top: 680px;
     left: 300px;
     width: 700px;
-    height: 10%;
+    height: 100px;
+    aspect-ratio: auto;
+    /* height: 10%; */
 }
 canvas{
     position: absolute;
