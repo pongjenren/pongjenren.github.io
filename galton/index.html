@@ -4,39 +4,78 @@
     <meta charset="utf-8" />
     <title>Galton Board H34091021</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <script type="text/javascript" src="build/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="build/matter.js"></script>
-  <script type="text/javascript" src="galtonboard.js"></script>
+  <!-- <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <body>
-    <h1>Intro to Communications</h1>
-    工資管113 H34091021 彭真人 Final Project<br><br><br>
-    Number of layers of pillars: <br>
-    <!-- <input type="number" id="pillers_input" min="5" max="10" value="5" style="width: 150px;"><br> -->
-    <select stlye="width: 150px;" id="number_of_pillar">
-      <option>12</option>
-      <option selected="selected">16</option>
-      <option>18</option>
-    </select><br>
-    Number of balls:<br>
-    <!-- <input type="number" id="balls_input" min="100" max="200" step="20" value="100" style="width: 150px;"><br> -->
-    <select id="number_of_ball">
-      <option>500</option>
-      <option selected="selected">600</option>
-      <option>700</option>
-    </select><br>
-    Pillar's offset:<br>
-    <select id="pillar_offset">
-      <option selected="selected">10</option>
-      <option>12</option>
-      <option>14</option>
-    </select><br>
-    <input type="checkbox" id="display_nd" name="display_nd" checked>
-    <label for="display_nd">Display Gaussian curve</label><br>
-    <button onclick="run_galton()">Run!</button>
-    <div id="matter_canvas" name="matter_canvas"></div>
-    <img src = "./svg/normal_distribution.svg" id="nd_curve"/>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Galton board</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Intro to Communications 工資管113 H34091021 彭真人<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Discussion</a>
+          </li>
+        </ul>
+        <!-- <span class="navbar-text">
+          工資管113 H34091021 彭真人 Final Project
+        </span> -->
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <br>  
+          Number of layers of pillars: <br>
+          <!-- <input type="number" id="pillers_input" min="5" max="10" value="5" style="width: 150px;"><br> -->
+          <select width="200" style="width: 200px" id="number_of_pillar">
+            <option>12</option>
+            <option selected="selected">16</option>
+            <option>18</option>
+          </select><br>
+          Number of balls:<br>
+          <!-- <input type="number" id="balls_input" min="100" max="200" step="20" value="100" style="width: 150px;"><br> -->
+          <select id="number_of_ball" width="200" style="width: 200px">
+            <option>500</option>
+            <option selected="selected">600</option>
+            <option>700</option>
+          </select><br>
+          Pillar's offset:<br>
+          <select id="pillar_offset" width="200" style="width: 200px">
+            <option selected="selected">10</option>
+            <option>12</option>
+            <option>14</option>
+          </select><br>
+          <input type="checkbox" id="display_nd" name="display_nd" checked>
+          <label for="display_nd">Display Gaussian curve</label><br>
+          <button onclick="run_galton()" type="button" class="btn btn-primary">Run!</button>
+        </div>
+
+        <div class="col">
+          <div id="matter_canvas" name="matter_canvas"></div>
+          <img src = "./svg/normal_distribution.svg" id="nd_curve"/>
+        </div>
+      </div>
+    </div>
+        
   </body>
   <!-- <script type="text/javascript" src="test.js"></script> -->
+  <script type="text/javascript" src="galtonboard.js"></script>
   <script type="text/javascript" src="ui.js"></script>
-</html>
+  </html>

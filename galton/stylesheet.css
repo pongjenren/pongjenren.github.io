@@ -3,14 +3,12 @@ img{
     filter: invert(100%);
     z-index: 3;
     top: 680px;
-    left: 300px;
+    left: -80px;
     width: 700px;
     height: 100px;
     aspect-ratio: auto;
     /* height: 10%; */
 }
 canvas{
-    position: absolute;
-    top: 0px;
-    left: 400px;
+    position: relative;
 }

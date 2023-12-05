@@ -1,14 +1,12 @@
-function build_galton(){
-        // module aliases
-    var Engine = Matter.Engine,
+var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Bodies = Matter.Bodies,
+    World = Matter.World,
     Composite = Matter.Composite;
     Composites = Matter.Composites,
     Svg = Matter.Svg;
 
-    // create an engine
     var engine = Engine.create();
 
     // create a renderer
@@ -24,6 +22,35 @@ function build_galton(){
     }
     });
 
+    var runner = Runner.create();
+
+    
+function build_galton(){
+        // module aliases
+    // var Engine = Matter.Engine,
+    // Render = Matter.Render,
+    // Runner = Matter.Runner,
+    // Bodies = Matter.Bodies,
+    // Composite = Matter.Composite;
+    // Composites = Matter.Composites,
+    // Svg = Matter.Svg;
+
+    // create an engine
+    // var engine = Engine.create();
+
+    // // create a renderer
+    // var render = Render.create({
+    // // element: document.body,
+    // element: $("#matter_canvas")[0],
+    // engine: engine,
+    // options:{
+    //     width: 500,
+    //     height:800, 
+    //     // background: '#ffffff',
+    //     // wireframeBackground: '#ffffff'
+    // }
+    // });
+
     // create two boxes and a ground
     // var boxA = Bodies.circle(400, 200, 80, 80);
     // var boxB = Bodies.rectangle(450, 50, 80, 80);
@@ -34,7 +61,6 @@ function build_galton(){
     var slots = Composites.stack(0, 600, 80, 1, 15, 0, function(x, y){
         return Bodies.rectangle(x, y, 3, 200, {isStatic: true, friction: 0, frictionStatic:0});
     });
-    var p_offset = $("#pillar_offset").val();
     var pillars1 = Composites.stack(10, 320, 35, $("#number_of_pillar").val()/2 ,$("#pillar_offset").val()*1, $("#pillar_offset").val()*2, function(x, y){
         // return Bodies.polygon(x, y, 3, 6, {angle: -3.14159265/6, isStatic: true });
         return Bodies.circle(x, y, 2, {angle: -3.14159265/6, isStatic: true, friction: 0.0, frictionStatic: 0 });
@@ -101,7 +127,7 @@ function build_galton(){
     Render.run(render);
 
     // create runner
-    var runner = Runner.create();
+    // var runner = Runner.create();
     // run the engine
     Runner.run(runner, engine);
 
@@ -109,6 +135,10 @@ function build_galton(){
 }
 
 function run_galton(){
+    Engine.clear(engine);
+    World.clear(engine.world);
+    Runner.stop(runner);
+    // Render.clear(render);
     build_galton();
     // var runner = Runner.create();
     // Runner.run(runner, engine);
