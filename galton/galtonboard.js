@@ -21,7 +21,7 @@ var Engine = Matter.Engine,
         // wireframeBackground: '#ffffff'
     }
     });
-
+    Matter.Render.setPixelRatio(render, 1);
     var runner = Runner.create();
 
     
@@ -57,6 +57,7 @@ function build_galton(){
     // add bodies
     var balls = Composites.stack(150, -300, 25, $("#number_of_ball").val()/25, 3, 7, function(x, y) {
         return Bodies.circle(x, y, 3, {friction: 0.1, frictionStatic: 0.5, density: 1e-10, restitution: 0.9});
+        // return Bodies.circle(x, y, 3.5, {friction: 0.1, frictionStatic: 0.5, density: 1e-10, restitution: 0.9});
     });
     var slots = Composites.stack(0, 600, 80, 1, 15, 0, function(x, y){
         return Bodies.rectangle(x, y, 3, 200, {isStatic: true, friction: 0, frictionStatic:0});
@@ -64,13 +65,17 @@ function build_galton(){
     var pillars1 = Composites.stack(10, 320, 35, $("#number_of_pillar").val()/2 ,$("#pillar_offset").val()*1, $("#pillar_offset").val()*2, function(x, y){
         // return Bodies.polygon(x, y, 3, 6, {angle: -3.14159265/6, isStatic: true });
         return Bodies.circle(x, y, 2, {angle: -3.14159265/6, isStatic: true, friction: 0.0, frictionStatic: 0 });
+        // return Bodies.circle(x, y, 2, {angle: -3.14159265/6, isStatic: true, friction: 0.8, frictionStatic: 0.8 });
     });
     var pillars2 = Composites.stack(2, 320+$("#pillar_offset").val()*1, 35, $("#number_of_pillar").val()/2, $("#pillar_offset").val()*1, $("#pillar_offset").val()*2, function(x, y){
         // return Bodies.polygon(x, y, 3, 6, {angle: -3.14159265/6, isStatic: true });
         return Bodies.circle(x, y, 2, {angle: -3.14159265/6, isStatic: true, friction: 0.0, frictionStatic: 0 });
+        // return Bodies.circle(x, y, 2, {angle: -3.14159265/6, isStatic: true, friction: 0.8, frictionStatic: 0.8 });
     });
     var left_baffle = Bodies.rectangle(123, 150, 350, 10, {isStatic: true, angle: 3.14159*95/360,friction: 0, frictionStatic: 0});
+    // var left_baffle = Bodies.rectangle(113, 150, 350, 10, {isStatic: true, angle: 3.14159*95/360,friction: 0, frictionStatic: 0});
     var right_baffle = Bodies.rectangle(377, 150, 350, 10, {isStatic: true, angle: -3.14159*95/360, friction: 0, frictionStatic: 0});
+    // var right_baffle = Bodies.rectangle(387, 150, 350, 10, {isStatic: true, angle: -3.14159*95/360, friction: 0, frictionStatic: 0});
     var ground = Bodies.rectangle(400, 810, 810, 60, { isStatic: true, restitution: 1 });
 
     // var select = function(root, selector) {
